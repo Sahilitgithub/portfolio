@@ -1,4 +1,3 @@
-import { carrent, jobit, tripguide } from "@/assets/index";
 
 import reactjsImage from "@/public/images/react .png";
 import nextjsImage from "@/public/images/nextjs.png";
@@ -132,7 +131,7 @@ const projects = [
         color: "text-green-600",
       },
     ],
-    image: carrent,
+    image: '/images/carrent.png',
     websiteDemo: "https://www.onlineshopbds.com.bd",
     source_code_link: "https://github.com/",
   },
@@ -154,7 +153,7 @@ const projects = [
         color: "text-pink-600",
       },
     ],
-    image: jobit,
+    image: "/images/jobit.png",
     websiteDemo: "https://www.onlineshopbds.com.bd",
     source_code_link: "https://github.com/",
   },
@@ -176,7 +175,7 @@ const projects = [
         color: "text-indigo-600",
       },
     ],
-    image: tripguide,
+    image: "/images/tripguide.png",
     websiteDemo: "https://www.onlineshopbds.com.bd",
     source_code_link: "https://github.com/",
   },

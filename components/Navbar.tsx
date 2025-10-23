@@ -2,7 +2,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { navLinks } from "./constants";
-import { menu, close } from "../assets";
+import menu from "@/public/images/menu.svg";
+import close from "@/public/images/close.svg";
 import Image from "next/image";
 
 const Navbar = () => {
@@ -10,7 +11,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <nav
-      className={`sm:px-16 px-6 w-full flex items-center py-5 fixed z-[100] top-0 opacity-95 header-bg`}
+      className={`sm:px-16 px-6 w-full flex items-center py-5 fixed z-20 top-0 opacity-95 header-bg`}
     >
       <div className="w-full flex justify-between items-center max-7xl mx-auto">
         <Link href="/" 
@@ -57,7 +58,7 @@ const Navbar = () => {
             width={28}
             height={28}
             onClick={() => setToggle(!toggle)}
-            className="w-[28px] h-[28px] object-contain"
+            className="w-7 h-7 object-contain"
           />
           <div
             className={`${

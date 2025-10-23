@@ -1,5 +1,5 @@
 "use client";
-import { github } from "@/assets";
+import github from "@/public/images/github.png";
 import { projects } from "./constants";
 import { motion } from "framer-motion";
 import type { StaticImageData } from "next/image";
@@ -103,7 +103,7 @@ const ProjectsCard: React.FC<ProjectsProps> = ({
             </div>
           </div>
           <div
-            className="absolute bottom-0 left-0 w-full h-4/5 bg-gradient-to-br from-purple-600 to-black 
+            className="absolute bottom-0 left-0 w-full h-4/5 bg-linear-to-br from-purple-600 to-black 
              hidden group-hover:flex justify-center items-center
              opacity-0 group-hover:opacity-100 
              pointer-events-none group-hover:pointer-events-auto"

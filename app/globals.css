@@ -1,26 +1,133 @@
 @import "tailwindcss";
 
+/* Define custom CSS variables for easy maintenance and theming */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Black color */ /* Active state color */
+  --color-background: #000119; /* Main background color */
+  --stroke-width: calc(2em / 16); /* Dynamic stroke width */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html,
+body {
+  overflow-x: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.h2_center{
+  background: linear-gradient(130deg, #055464 0%, #fed90f 40%, #ba02a5 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Header Part */
+.header-bg{
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    #03221f 49%,
+    #000119 79%
+  );
+}
+
+.mobile-navbar-gradient{
+  background: linear-gradient(45deg, #09f1b8 0%, black 50%, #ff00d2 20%, #000119 30%)
+}
+
+.brandName {
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(90deg, #09f1b8, #00a2ff, #ff00d2, #fed90f);
+    color: var(--color-background);
+    letter-spacing: 2px;
+    padding: calc(--stroke-width / 2);
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: var(--stroke-width);
+}
+
+/* Hero Part */
+.custom-hero-bg {
+  background-image: url("/hero-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* About Part */
+.profile {
+  position: relative;
+  height: 500px !important;
+}
+
+.profile .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 1px 1px 85px 33px var(--color-violet-700);
+  z-index: -1;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  animation: spin 6s ease-in-out infinite alternate-reverse;
+  animation: morph 4s ease-in-out infinite both alternate;
+  box-shadow: -6px 1px 180px 17px #1080ff; 
+}
+
+@keyframes spin {
+  to{
+    transform: rotate(1turn)
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes morph {
+  0% {
+    border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
+  }
+}
+
+/* Projects Part */
+.project-card {
+  position: relative;
+  width: 270px;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.card-box {
+  position: relative;
+  z-index: 2;
+  background: transparent;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(180deg, #ff00c8, cyan);
+  animation: animate 3s linear infinite;
+  z-index: -2;
+}
+
+.project-card::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  background: #0C0A09;
+  border-radius: 15px;
+  z-index: -1;
+}
+
+
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

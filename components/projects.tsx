@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import type { StaticImageData } from "next/image";
 import Image from "next/image";
 import Link from "next/link";
-import Tilt from 'react-parallax-tilt'
 
 type Tag = {
   name: string;
@@ -49,7 +48,7 @@ const ProjectsCard: React.FC<ProjectsProps> = ({
 }) => {
   return (
     // The individual project card
-    <Tilt tiltMaxAngleX={25} tiltMaxAngleY={25}>
+    <div>
       <motion.div
         variants={itemsVariants} // This tells the parent to use these variants
         className="project-card shadow-md shadow-blue-500"
@@ -119,7 +118,7 @@ const ProjectsCard: React.FC<ProjectsProps> = ({
           </div>
         </div>
       </motion.div>
-    </Tilt>
+    </div>
   );
 };
 

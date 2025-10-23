@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import type { StaticImageData } from "next/image";
 import Image from "next/image";
 import Link from "next/link";
-import { Tilt } from "react-tilt";
+import Tilt from 'react-parallax-tilt'
 
 type Tag = {
   name: string;
@@ -49,7 +49,7 @@ const ProjectsCard: React.FC<ProjectsProps> = ({
 }) => {
   return (
     // The individual project card
-    <Tilt options={{ max: 20, scale: 1 }}>
+    <Tilt tiltMaxAngleX={25} tiltMaxAngleY={25}>
       <motion.div
         variants={itemsVariants} // This tells the parent to use these variants
         className="project-card shadow-md shadow-blue-500"
